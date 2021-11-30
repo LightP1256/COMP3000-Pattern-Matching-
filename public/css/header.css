@@ -1,0 +1,68 @@
+.header.open .header__nav > span:first-child {
+  transform: rotate(45deg);
+}
+.header.open .header__nav > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__nav > span:last-child {
+  transform: rotate(-45deg);
+}
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  background-image: linear-gradient(royalblue, transparent);
+}
+.header nav {
+  position: relative;
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1.375rem;
+}
+.header__logo img {
+  width: 13.1875rem;
+  height: 4.75rem;
+}
+.header__nav > span {
+  display: block;
+  width: 1.875rem;
+  height: 0.188rem;
+  background-color: black;
+  transition: all 200ms ease-in-out;
+  transform-origin: 3px 1px;
+}
+.header__nav > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header__menu {
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fffff5;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+.header__menu a {
+  display: block;
+  color: black;
+  padding: 0.5rem;
+  text-align: center;
+}
+.header__menu a:hover {
+  color: limegreen;
+}
+.header__links a {
+  position: relative;
+  font-size: 1.25rem;
+  color: black;
+  transition: color 200ms ease-in-out;
+}
+.header__links a:not(:last-child) {
+  margin-right: 2.25rem;
+}
+.header__links a:hover {
+  color: limegreen;
+}
+
+/*# sourceMappingURL=header.css.map */
