@@ -79,7 +79,11 @@
         <a href="#">Privacy Policy</a>
     </div>
     <div class="footer__copyright">
-        &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Pattern Matching
+        <script type="text/javascript"> window.onload = function copyright(){
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        };
+        </script>
+        &copy; <span id="year"></span> Pattern Matching
     </div>
 
 </footer>
