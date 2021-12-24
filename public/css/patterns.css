@@ -1,0 +1,99 @@
+:root{
+    --viewport-width: 100vw;
+    --viewport-height: 100vh;
+    --interface-width-container: calc(var(--viewport-width) - 3vw);
+    --interface-height-container: calc(var(--viewport-height) - 5vh);
+    --section-width-container: calc(var(--interface-width-container) - 1em);
+    --section-height-container: calc(var(--interface-height-container) - (var(--interface-height-container)/1.75));
+    --base-image-width-container: calc(var(--section-width-container)/2.5);
+    --base-image-height-container: calc(var(--section-height-container) - var(--section-height-container)/19);
+    --selections-row-width-wrapper: calc(var(--section-width-container)/1.85);
+    --three-selection-width-wrapper: calc(var(--section-width-container) - var(--section-width-container)/1.18);
+    --three-selection-height-wrapper: calc(var(--section-height-container) - var(--section-height-container)/1.5);
+    --four-selection-width-wrapper: calc(var(--section-width-container) - var(--section-width-container)/1.13);
+    --four-selection-height-wrapper: calc(var(--section-height-container) - var(--section-height-container)/1.4);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: var(--viewport-width);
+    height: var(--viewport-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interface-container{
+    width: var(--interface-width-container);
+    height: var(--interface-height-container);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-size: var(--interface-width-container) var(--interface-height-container);
+}
+
+.interface-container > div{
+    width: var(--section-width-container);
+    height: var(--section-height-container);
+    margin: .1em .1em;
+    display: flex;
+    justify-content: center;
+}
+
+.base-image-container{
+    width: var(--base-image-width-container);
+    height: var(--base-image-height-container);
+    background-repeat: no-repeat;
+    background-size: var(--base-image-width-container) var(--base-image-height-container);
+}
+
+.selections-list-container{
+    width: calc(var(--section-width-container)/1.85);
+    height: var(--section-height-container);
+    display: flex;
+    flex-direction: column;
+}
+
+[class$="-row-selection-wrapper"]{
+    width: var(--selections-row-width-wrapper);
+    display: flex;
+    justify-content: space-between;
+}
+
+.three-elements-first-row-selection-wrapper{
+    margin-top: calc(var(--section-height-container)/5.8);
+}
+
+.three-elements-second-row-selection-wrapper{
+    margin-top: calc(var(--section-height-container)/9.6);
+}
+
+.four-elements-first-row-selection-wrapper{
+    margin-top: calc(var(--section-height-container)/5.1);
+}
+
+.four-elements-second-row-selection-wrapper{
+    margin-top: calc(var(--section-height-container)/7);
+}
+
+.three-elements-selection-wrapper{
+    width: var(--three-selection-width-wrapper);
+    height: var(--three-selection-height-wrapper);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: var(--three-selection-width-wrapper) var(--three-selection-height-wrapper);
+}
+
+.four-elements-selection-wrapper{
+    width: var(--four-selection-width-wrapper);
+    height: var(--four-selection-height-wrapper);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: var(--four-selection-width-wrapper) var(--four-selection-height-wrapper);
+}
