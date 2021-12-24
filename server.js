@@ -60,5 +60,14 @@ server.get("/home", function (request, response) {
 server.get("/registration", function (request, response) {
     response.render("registration")
 });
+server.get("/index", function (request, response) {
+    response.render("index")
+});
+server.get("/start", function (request, response) {
+    response.render("start")
+});
+server.get("/result", function (request, response) {
+    response.render("result")
+});
 // Export
 module.exports.server = server;
