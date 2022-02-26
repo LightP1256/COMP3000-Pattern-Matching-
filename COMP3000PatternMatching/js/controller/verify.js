@@ -21,6 +21,9 @@ const inputsLengthData = {
 const verifyInputFormat = (expressionToValidate, event) => {
     const keyPressed = event.key;
     const expectedValues = new RegExp(expressionToValidate, `i`);
+    (expectedValues.test(keyPressed)) ?
+        keyPressed :
+        event.preventDefault();
 };
 
 const hasInputWrongLength = (valueProvided, minLength, maxLength) => {

@@ -74,7 +74,7 @@ export const getNumberOfRightAnswers = (plaquesSelected) => {
     let numberOfRightAnswers = 0;
 
     for (let actualPlaque in plaquesSelected) {
-        if (plaquesSelected[actualPlaque] === rightAnswers[actualPlaque]) {
+        if (plaquesSelected[actualPlaque] == rightAnswers[actualPlaque]) {
             numberOfRightAnswers++;
         }
     }
