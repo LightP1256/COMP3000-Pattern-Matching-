@@ -1,7 +1,6 @@
-import {getPersonGroup} from "/js/percentiles.js";
-import{getPercentile} from '/js/percentiles.js';
-import {getNumberOfRightAnswers} from '/js/answer.js';
-import {getPersonDiagnostic} from '/js/answer.js';
+import {getPercentile, getPersonGroup} from "./percentiles.js";
+import {getNumberOfRightAnswers, getPersonDiagnostic} from "./answer.js";
+
 const [personData, personAnswers] = JSON.parse(localStorage.getItem('dataToEvaluate')),
     resultsTitle = document.getElementById('title'),
     resultsContainer = document.getElementById('personResults');

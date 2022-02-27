@@ -3,7 +3,7 @@ import {patternData} from "./data.js";
 const personData = JSON.parse(localStorage.getItem("personData"));
 localStorage.clear();
 if(!personData){
-    location.replace("/js/views/index.html");
+    location.replace("./index");
 }
 const personAnswers = {};
 
@@ -33,7 +33,7 @@ const generateInterfaceElements = (selectionsPerRow, selectionsClassName) => {
 
     for (let selection in patternData[actualPlaque]) {
 
-        if (plaqueSelector === 0) {
+        if (plaqueSelector == 0) {
             const mainImage = document.createElement('img');
             mainImage.setAttribute('src', `${patternData[actualPlaque][selection]}`);
             mainImage.setAttribute('alt', `Pattern Test, Plaque ${selection}`);
@@ -83,7 +83,7 @@ const manageSelection = (event) => {
         if(actualPlaque === 60){
             const dataToEvaluate = [personData, personAnswers];
             localStorage.setItem('dataToEvaluate', JSON.stringify(dataToEvaluate));
-            location.replace("/js/views/result.html");
+            location.replace("./result");
         }
         clearOldPlaques();
         manageInterfaceCreation();
