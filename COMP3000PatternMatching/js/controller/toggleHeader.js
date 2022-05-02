@@ -17,6 +17,7 @@ togHamburger.addEventListener("click", function(){
             element.classList.add("fade-out");
         });
     }
+    // Use on mobile or small screen devices
     else { //Open hamburger nav
         body.classList.add("stop-scroll");
         header.classList.add("open");

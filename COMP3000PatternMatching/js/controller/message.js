@@ -4,7 +4,7 @@ $(function () {
     socket.on("received message", function (msg) {
         $('#msgOutput').append("<p class=\"message text-break\">" + msg + "</p>");
     });
-    // Send user message to server for sending out to other clients that are online
+    // Send user message to server for sending out to other clients that is online
     $("#send").click(function () {
         $.post("/api/getUserDetails", function (data) {
             let user = data[0];

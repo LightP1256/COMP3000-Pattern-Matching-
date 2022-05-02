@@ -20,11 +20,11 @@ $(function () {
 
         $('#userDOB').html(dob);
     });
-    // Clearing cookie and topicID
+    // Clearing cookie when clicking logout and going back to login page
     $('#btnLogout').click(async function () {
         Cookies.remove("user");
-        localStorage.removeItem("topic");
         location.reload();
+        location.replace("login")
     })
     // To show popup for change email
     $('#btnChangeEmail').click(function () {
@@ -105,10 +105,10 @@ $(function () {
                     $('#confirmErr').attr('hidden', true);
                     $('#confirmPswrdDelete').removeClass("is-invalid");
                     alert("Your Account has successfully been removed");
-                    // Login out process clearing cookie and removing topicID
+                    // Login out process clearing cookie
                     Cookies.remove("user");
-                    localStorage.removeItem("topic");
                     location.reload();
+                    location.replace("registration")
                 }
             }
         });

@@ -1,12 +1,12 @@
 import {patternData} from "./data.js";
-
+// Collecting person data
 const personData = JSON.parse(localStorage.getItem("personData"));
 localStorage.clear();
 if(!personData){
     location.replace("./index");
 }
 const personAnswers = {};
-
+// Getting containers
 let actualPlaque = 0;
 const selectionList = document.getElementById('selectionsListContainer'),
     baseImage = document.getElementById('baseImageContainer'),
@@ -26,7 +26,7 @@ const plaqueCreator = (patternData, selection, className) => {
 
     return plaqueContainer;
 };
-
+// Creating field
 const generateInterfaceElements = (selectionsPerRow, selectionsClassName) => {
 
     let plaqueSelector = 0;
@@ -51,7 +51,7 @@ const generateInterfaceElements = (selectionsPerRow, selectionsClassName) => {
         plaqueSelector++;
     }
 };
-
+// Clearing
 const removeChildrenElements = (DomElement) => {
     while (DomElement.firstChild) {
         DomElement.removeChild(DomElement.firstChild);

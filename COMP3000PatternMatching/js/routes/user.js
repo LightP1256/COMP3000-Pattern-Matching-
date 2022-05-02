@@ -9,7 +9,7 @@ async function getAllUsers(request, response) {
 
     response.send(data);
 }
-
+// User details
 async function getUserDetails(request, response) {
     try {
         let userCookie = cookie.parse(request.headers.cookie);
@@ -26,7 +26,7 @@ async function getUserDetails(request, response) {
     }
 
 }
-
+// reg user
 async function registerUser(request, response) {
     let agree = request.body.inpAgree;
 
@@ -83,7 +83,7 @@ async function registerUser(request, response) {
         response.end("agreeErr");
     }
 }
-
+// login user
 async function loginUser(request, response) {
     let email = request.body.inpLoginEmail;
     let password = encrypt(Buffer.from(request.body.inpLoginPassword));
@@ -121,7 +121,7 @@ async function adminActive(request, response) {
         response.redirect("/login");
     }
 }
-
+// logout user
 async function logoutUser(request, response) {
     response.redirect("/login");
 }

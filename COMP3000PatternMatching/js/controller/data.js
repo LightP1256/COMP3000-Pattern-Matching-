@@ -1,5 +1,5 @@
 "use strict";
-
+// exporting pattern data
 export const patternData = [
     {
         "A1-0": "../assets/places/A1/A1-0.png",

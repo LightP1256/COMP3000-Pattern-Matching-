@@ -1,6 +1,6 @@
 import {getPercentile, getPersonGroup} from "./percentiles.js";
 import {getNumberOfRightAnswers, getPersonDiagnostic} from "./answer.js";
-
+// collecting person result to be displayed
 const [personData, personAnswers] = JSON.parse(localStorage.getItem('dataToEvaluate')),
     resultsTitle = document.getElementById('title'),
     resultsContainer = document.getElementById('personResults');
