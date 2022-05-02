@@ -11,3 +11,44 @@ With that there isn’t really any website application that can provide this ser
 
 ## Allocated supervisor
 #### Mark Dixon
+
+## Built using
+#### IntelliJ Idea
+#### Node js 
+#### mongoose
+#### MongoDB
+#### Js Cookies
+#### Js message
+#### BootStrap
+
+## Start application 
+Please run server.js and use http://localhost:9000/registration if you what to start using this application.
+
+### Registration Page
+Landing page of the application to make an account. 
+
+### Login Page
+Sign in using your register account.
+
+### Home Page
+Main page of the application where you can go to different section like Activities, Login, Sign up, My account, Logout, About, Contact, Support and Privacy Policy.
+
+### Activities Page
+Can input your name and age to get to start completing the activities.
+
+### Result page 
+Will See you final score and can go back to any page.
+
+### About page
+explains about the project and in more details. 
+### Contact Page
+Has a form to fill out if you want to contact the admin.
+
+### Support Page
+Has my email address if the user want some support. 
+
+### Privacy Policy Page
+Talks about how your data is being used and what data is needed. 
+
+### My account page
+Shows your details and can change you email, password or delete your account.
